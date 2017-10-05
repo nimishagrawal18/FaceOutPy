@@ -8,4 +8,3 @@ def led():
         if time.time()==(tym+5):  # Keep signal on for 5 sec
             ser.write('L')
             break
-led()
