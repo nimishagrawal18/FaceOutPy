@@ -1,5 +1,5 @@
 # test script for Recognition
-
+import Arduino
 import kairos_face
 kairos_face.settings.app_id = "1efff1b3"
 kairos_face.settings.app_key = "95817e68b6633112a23d0589b76a73f1"
@@ -12,6 +12,8 @@ try :
         confidence = recog['images'][0]['transaction']['confidence']
         print (found)
         print("The person is "+person+" with %d percent confidence." %(confidence*100))
+        if confidence>=0.65:
+            Arduino.led()
     except ValueError:
         err=recog['Errors']
         print("the following errors were recieved -")
