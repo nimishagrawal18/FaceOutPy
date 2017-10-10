@@ -13,13 +13,16 @@ try :
         print (found)
         print("The person is "+person+" with %d percent confidence." %(confidence*100))
         if confidence>=0.65:
-            Arduino.led()
+            try:
+                Arduino.led()
+            except Arduino.SerialError:
+                print "Unable to open door!"
     except ValueError:
         err=recog['Errors']
         print("the following errors were recieved -")
         for i in err:
-            print
+            print i
 except kairos_face.exceptions.ServiceRequestError :
     print('gallery not found')
-except :
-    print ('ERROR!!')
+#except :
+ #   print ('ERROR!!')
