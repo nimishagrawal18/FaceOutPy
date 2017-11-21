@@ -1,0 +1,5 @@
+import serial
+ser=serial.Serial('COM3',9600)
+while 1:
+    var=raw_input("Enter Duration")
+    ser.write(var)
