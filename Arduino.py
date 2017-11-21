@@ -1,9 +1,7 @@
 import serial
 import time
-class SerialError(RuntimeError):
-    def init(self,arg):
-        self.args=arg
-def led():
+
+def openDoor():
     try:
         ser=serial.Serial('COM3',9600)
         tym=time.time()
@@ -13,4 +11,4 @@ def led():
                 ser.write('L')
                 break
     except serial.serialutil.SerialException:
-        raise SerialError("Serial Port Error!")
+        print("Serial Port Error!")
