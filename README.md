@@ -21,7 +21,8 @@ The locking/unlocking of the door is controlled using an **Arduino Uno** connect
 
 ## Android App Module
 **[Android App Module Repository](https://github.com/nil97/FaceOut2.0)**
-This module aacts as the primary Interface with the User. It is a user friendly app which acts as a notification channel, as well as providing a UI for Enrollment of new "Contacts" as well as managing existing ones. The app supports basic functionality as of now and we plan on expanding that in the near future. When the user clicks on the recieved Notification, a UI pops up which includes the most recent snapshot of the person, along with fields for the name of the person and the choice of whether to enroll the person in the whitelist or the blacklist. Upon confirmation from the user, the set details are uploaded to Firebase and consequently enrolled in the face recognition database via the central module.
+
+This module acts as the primary Interface with the User. It is a user friendly app which acts as a notification channel, as well as providing a UI for Enrollment of new "Contacts" as well as managing existing ones. The app supports basic functionality as of now and we plan on expanding that in the near future. When the user clicks on the recieved Notification, a UI pops up which includes the most recent snapshot of the person, along with fields for the name of the person and the choice of whether to enroll the person in the whitelist or the blacklist. Upon confirmation from the user, the set details are uploaded to Firebase and consequently enrolled in the face recognition database via the central module.
 
 for more information contact us at <nimishagrawal.18@gmail.com>
 
